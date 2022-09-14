@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Experimental JS POS System">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/pos.png">
+    <!-- Title -->
+    <title>Bartenders POS</title>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;1,700&display=swap" rel="stylesheet">
+    <!-- SERVICE WORKER -->
+    <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("worker.js");
+    }
+    </script>
+    <!-- CSS + JS -->
+    <link rel="stylesheet" href="style.css"/>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h1>Happy Hour Menu</h1>
+    <!-- (A) PRODUCTS LIST -->
+    <div id="poslist"></div>
+
+    <!-- (B) CART -->
+    <div id="poscart"></div>
+
+    <!-- (C) NINJA RECEIPT -->
+    <div id="posreceipt"></div>
+  </body>
+</html>
